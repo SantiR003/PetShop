@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+
 import '../../Styles/viewProd/viewProducts.css'
 
 export const ViewProducts = ({ listaAlimentos = [] }) => {
@@ -12,7 +12,7 @@ export const ViewProducts = ({ listaAlimentos = [] }) => {
                                 <div className="card border border-black" style={{ width: '18rem' }}>
                                     <img src={productos.imagen} className="card-img-top" alt='' />
                                     <div className="card-body ">
-                                        <h5 className="card-title border-black">{productos.nombre}</h5>
+                                        <h6 className="card-title border-black">{productos.nombreProducto}</h6>
                                         <p className="card-text text-center">{productos.descripcion}</p>
                                     </div>
                                     <ul className="list-group list-group-flush ">

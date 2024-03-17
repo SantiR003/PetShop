@@ -21,9 +21,10 @@ export const PetShopApp = () => {
         setValor(respuesta.data.length > 0);
     }
 
+
     return (
         <>
-        <Header obtenerInput = {controladorInputHeader}/>
+        <Header obtenerInput = {controladorInputHeader} controladorBotones = {controladorInputHeader}/>
             {valor == true ? (
                 <ViewProducts listaAlimentos={alimentos}/>
             )

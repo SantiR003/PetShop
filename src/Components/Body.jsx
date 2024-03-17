@@ -49,7 +49,7 @@ export const Body = ({ productos = [] }) => {
                                                 <div className="card border border-warning" style={{ width: '18rem' }}>
                                                     <img src={producto.imagen} className="card-img-top" alt='' />
                                                     <div className="card-body">
-                                                        <h7 className="card-title">{producto.nombreProducto}</h7>
+                                                        <h6 className="card-title">{producto.nombreProducto}</h6>
                                                         <p className="card-text text-center ">{producto.descripcion}</p>
                                                     </div>
                                                     <ul className="list-group list-group-flush ">
