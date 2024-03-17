@@ -1,0 +1,20 @@
+.contendor-footer{
+        background-color: rgb(255, 128, 0);
+        padding: 1rem;
+}
+
+.subContenedor-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+p{
+    font-family: "Angkor", serif;
+    font-size: small;
+}
+
+.desarrollador{
+    margin-top: 0.8rem;
+}

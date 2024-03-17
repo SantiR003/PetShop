@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&display=swap');
+
+.container-fluid{
+    background-color: rgb(255, 128, 0);
+    width: 100%;
+}
+
+.contenedor-marca{
+    font-family: "Angkor", serif;
+    text-align: center;
+}
+
+.contenedor-input{
+    margin-top: 0.5rem;
+}
+
+.contenedor-redes{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+.icons-header{
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0.5rem;
+}
+
+.form-control{
+    width: 20rem;
+}
+
+.contenedor-marca{
+    display: flex;
+    flex-direction: row;
+}
+
+.imagen-logo{
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}

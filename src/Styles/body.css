@@ -1,0 +1,48 @@
+img{
+    margin: 2rem;
+    max-width: 200px;
+    height: auto;
+}
+
+.img-carousel img{
+    box-shadow: 0px 4px 8px;
+}
+
+.titulo-productos{
+    background-color: rgb(255, 128, 0);
+}
+
+.titulo-marcas{
+    background-color: rgb(64, 64, 64);
+    color: white;
+}
+
+h2{
+    font-family: "Angkor", serif;
+    text-align: center;
+    padding: 1rem;
+}
+
+.contenedor-principal{
+    background: linear-gradient(to bottom,#ffffff,#ffc578be);
+    height: 100%;
+}
+
+.card{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: rgb(255, 236, 158);
+    box-shadow: 0px 0px 8px;
+    font-family: "Angkor", serif;
+}
+
+.card-body{
+    background-color: white;
+    height: 5rem;
+    font-size: small;
+}
+
+
+.card-title{
+    opacity: 40%;
+}
