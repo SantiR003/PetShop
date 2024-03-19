@@ -1,7 +1,22 @@
 
+import {useNavigate } from 'react-router-dom';
 import '../../Styles/viewProd/viewProducts.css'
 
-export const ViewProducts = ({ listaAlimentos = [] }) => {
+export const ViewProducts = ({ listaAlimentos = [],detalleAlimento}) => {
+
+    const navigate = useNavigate();
+
+    if(listaAlimentos.length === 0)
+    {
+        navigate('/body');
+    }
+
+    const handleCardClick = (producto) => {
+        detalleAlimento(producto);
+        navigate('/detalles');
+      }
+
+
     return (
         <>
             <div className="cotenendor-vistaProductos">
@@ -9,10 +24,10 @@ export const ViewProducts = ({ listaAlimentos = [] }) => {
                     <div className='row'>
                         {listaAlimentos.map(productos => (
                             <div key={productos.id} className="col-md-3 mb-2 col-sm-12">
-                                <div className="card border border-black" style={{ width: '18rem' }}>
+                                <div className="card border border border-warning" style={{ width: '18rem',cursor:'pointer' }} onClick={() => handleCardClick(productos)}>
                                     <img src={productos.imagen} className="card-img-top" alt='' />
                                     <div className="card-body ">
-                                        <h6 className="card-title border-black">{productos.nombreProducto}</h6>
+                                        <h6 className="card-title">{productos.nombreProducto}</h6>
                                         <p className="card-text text-center">{productos.descripcion}</p>
                                     </div>
                                     <ul className="list-group list-group-flush ">

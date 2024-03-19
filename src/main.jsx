@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { HomePage } from './Components/Home.jsx'
 import './Styles/homePage.css'
 import './Styles/body.css'
 import { PetShopApp } from './petShopApp.jsx'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <PetShopApp />
+    <BrowserRouter>
+      <PetShopApp />
+    </BrowserRouter>
   </React.StrictMode>,
 )

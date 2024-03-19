@@ -1,12 +1,10 @@
 import { useState,useEffect } from "react";
 import { findAll } from "../Services/petShopServices";
 import '../Styles/homePage.css'
-import { Header } from "./Header";
-import { Footer } from "./Footer";
 import { Body } from "./Body";
 
 
-export const HomePage = ()=>{
+export const HomePage = ({detalleAlimento})=>{
 
     const[alimentos, setAlimentos] = useState([]);
 
@@ -26,7 +24,7 @@ export const HomePage = ()=>{
   <>
   <div className="contenedor-principal">
 
-    <Body productos={alimentos}/>
+    <Body productos={alimentos} detalleAlimento = {detalleAlimento}/>
    
    </div>
   </>

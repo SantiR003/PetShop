@@ -1,13 +1,21 @@
+import { useNavigate } from 'react-router-dom';
 import '../Styles/body.css'
 
 
-export const Body = ({ productos = [] }) => {
+export const Body = ({ productos = [],detalleAlimento}) => {
 
     const productosPorGrupo = [];
+
+    const navigate = useNavigate();
 
     for (let i = 0; i < productos.length; i += 4) {
         productosPorGrupo.push(productos.slice(i, i + 4));
     }
+
+    const handleCardClick = (producto) => {
+        detalleAlimento(producto);
+        navigate('/detalles');
+      }
 
     return (
         <>
@@ -46,7 +54,7 @@ export const Body = ({ productos = [] }) => {
                                     <div className="row">
                                         {grupo.map((producto) => (
                                             <div key={producto.id} className="col-md-3 mb-2 col-sm-12">
-                                                <div className="card border border-warning" style={{ width: '18rem' }}>
+                                                <div className="card border border-warning mx-auto d-block" style={{ width: '18rem', cursor:'pointer' }} onClick={() => handleCardClick(producto)}>
                                                     <img src={producto.imagen} className="card-img-top" alt='' />
                                                     <div className="card-body">
                                                         <h6 className="card-title">{producto.nombreProducto}</h6>

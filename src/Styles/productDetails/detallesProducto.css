@@ -1,0 +1,23 @@
+.container-principal{
+    background: linear-gradient(to bottom,#ffffff,#ffc578be);
+    min-height: 100vh;
+}
+
+.carta-detalles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(2);
+}
+
+.cuerpo-carta{
+    background-color: transparent;
+    margin-left: 2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container-secundario {
+        display: block; /* Cambia a bloque para ajustarse en pantallas pequeñas */
+    }
+}

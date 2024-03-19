@@ -1,17 +1,23 @@
 import { useState } from "react";
 import '../Styles/header.css';
+import { useNavigate } from "react-router-dom";
 
 
 export const Header = ({ obtenerInput, controladorBotones }) => {
 
   const [busqueda, setBusqueda] = useState('');
 
+  const navigate = useNavigate();
+  
+
   const controladorOnChange = (event) => {
     setBusqueda(event.target.value);
+    navigate("/viewProducts");
   }
 
   const controladorOnButtons = (valor) => {
     controladorBotones(valor);
+    navigate("/viewProducts");
   }
 
   const controladorOnSubmit = (event) => {
@@ -30,16 +36,18 @@ export const Header = ({ obtenerInput, controladorBotones }) => {
     <div className="container-fluid sticky-md-top">
       <div className="row">
         <div className="col-md-4">
-          <div className="contenedor-marca" onClick={() => window.location.reload()}>
+          <div className="contenedor-marca" onClick={() => navigate('/body')}>
             <div className="texto-titulo">
               <h1>Pet Paradise</h1>
             </div>
+            <div className="col-md-1 col-sm-2">
             <div className="imagen-titulo">
               <img className="imagen-logo" src="src\Img\Icons\Diseño sin título (4).png" alt="" />
             </div>
+            </div>
           </div>
         </div>
-        <div className="col-md-4 col-sm-6">
+        <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
           <div className="contenedor-input d-flex justify-content-center">
             <div className="dropdown">
               <button className="btn btn-secondary dropdown-toggle p-0 btn-warning" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,13 +65,15 @@ export const Header = ({ obtenerInput, controladorBotones }) => {
                 <li><button onClick={() => controladorOnButtons('Royal Canin')} className="dropdown-item btn btn-link">Royal Canin</button></li>
               </ul>
             </div>
+            <div className="col-lg-8 col-md-6 col-sm- col-xs-6">
             <form onSubmit={controladorOnSubmit} className="d-flex flex-column flex-sm-row align-items-center">
               <input type="text" className="form-control me-2 mb-2 mb-sm-0" placeholder="Buscar" value={busqueda} onChange={controladorOnChange} />
               <button type="submit" className="btn btn-warning">🔎</button>
             </form>
+            </div>
           </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-lg-1 col-md-4">
           <div className="contenedor-redes d-flex justify-content-center">
             <a href="#" className="me-3">
               <img className="icons-header" src="src/Img/Icons/facebook.png" alt="Facebook" />
